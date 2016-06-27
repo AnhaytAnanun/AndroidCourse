@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.flycode.aclesson1.RelativeLayoutExampleActivity">
+
+    <!-- This View will go to center -->
+
+    <View
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:background="#FF0000"/>
+
+    <!-- This View will go center vertical -->
+
+    <View
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:background="#00FF00"/>
+
+    <!-- This View will go to bottom of the screen -->
+
+    <View
+        android:id="@+id/view_at_bottom"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:background="#0000FF"/>
+
+    <!-- This View will be placed above the view_at_bottom -->
+
+    <View
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@id/view_at_bottom"
+        android:background="#FF00FF"/>
+
+    <!-- This View will be placed to the right of the view_at_bottom, -->
+    <!-- But it will also align it bottom to view_at_bottom's bottom -->
+
+    <View
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/view_at_bottom"
+        android:layout_toEndOf="@+id/view_at_bottom"
+        android:layout_toRightOf="@+id/view_at_bottom"
+        android:background="#0F0F0F"/>
+
+</RelativeLayout>

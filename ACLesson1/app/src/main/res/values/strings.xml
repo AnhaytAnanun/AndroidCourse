@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ACLesson1</string>
+    <string name="button_title">Cute Button</string>
+    <string name="text_view_examples">Text View Examples</string>
+    <string name="ordinary_text">Ordinary Text</string>
+    <string name="colored_text">Colored Text</string>
+    <string name="italic_text">Italic Text</string>
+    <string name="bold_text">Bold Text</string>
+    <string name="big_text">Big Text</string>
+    <string name="right_aligned_text">Rigth Aligned Text</string>
+    <string name="button_examples">Button Examples</string>
+    <string name="button_with_onclick_one">Button with onClick 1</string>
+    <string name="button_with_onclick_two">Button with onClick 2</string>
+    <string name="button_manual_one">Button Manual One</string>
+    <string name="button_manual_two">Button Manual Two</string>
+    <string name="button_manual_three">Button Manual Three</string>
+    <string name="type_something">Type Something</string>
+    <string name="angry_response">Angry Response</string>
+    <string name="kind_response">Kind Response</string>
+    <string name="start_result_example">Start Result Example</string>
+    <string name="linear_layout_example">Linear Layout Example</string>
+    <string name="relative_layout_example">Relative Layout Example</string>
+    <string name="send">Send</string>
+</resources>
