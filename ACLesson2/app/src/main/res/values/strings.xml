@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ACLesson2</string>
+    <string name="with_state">With State</string>
+    <string name="without_state">Without State</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="activity_save_state_example">Activity Save State</string>
+    <string name="fragment_save_state_example">Fragment Save State</string>
+    <string name="fragment_as_a_tag_example">Fragment As A Tag</string>
+    <string name="pass_argument_to_fragment_example">Pass Argument To Fragment</string>
+    <string name="fragment_activity_interaction_example">Fragmet-Activity Interaction</string>
+    <string name="fragment_one">Fragment One</string>
+    <string name="fragment_with_state">Fragment Two</string>
+    <string name="blue">Blue</string>
+    <string name="red">Red</string>
+    <string name="green">Green</string>
+</resources>
