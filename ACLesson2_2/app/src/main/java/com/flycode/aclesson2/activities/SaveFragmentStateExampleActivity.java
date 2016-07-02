@@ -50,8 +50,12 @@ public class SaveFragmentStateExampleActivity extends AppCompatActivity {
              * Our only action during this transaction is adding a fragment.
              * We provide tag so we can get this fragment if needed
              */
-            fragmentTransaction.add(R.id.container, new FragmentWithAState(), "content")
-                    .addToBackStack(null);
+            fragmentTransaction.add(R.id.container, new FragmentWithAState(), "content");
+
+            /**
+             * Add fragment to fragment navigation stack, so it won't be destroyed after being replaced
+             */
+            fragmentTransaction.addToBackStack(null);
 
             /**
              * Commit transaction, making our changes actually happen
@@ -84,11 +88,20 @@ public class SaveFragmentStateExampleActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (currentIndex == 1) {
+            /**
+             * If user is currently on fragment with number 1,
+             * then we need to pop that fragment to navigate to default fragment
+             */
             currentIndex = 0;
             getFragmentManager().popBackStack();
 
             return;
         }
+
+        /**
+         * If we do not navigate back in fragment stack,
+         * then we call super to navigate back to previous activity
+         */
 
         super.onBackPressed();
     }
@@ -98,22 +111,15 @@ public class SaveFragmentStateExampleActivity extends AppCompatActivity {
          * Just replace current fragment with one user wants to see now
          */
 
-//        if (currentIndex == 1) {
-        FragmentManager fragmentManager = getFragmentManager();
-        Fragment currentFragment = fragmentManager.findFragmentByTag("content");
-
-        if (currentFragment instanceof FragmentWithAState) {
+        if (currentIndex == 1) {
             currentIndex = 0;
 
+            /**
+             * Because fragment we need is in fragment navigation stack prior to current one,
+             * we just pop out current fragment from fragment navigation stack
+             */
             getFragmentManager().popBackStack();
         }
-
-//        getFragmentManager()
-//                .beginTransaction()
-//                .replace(R.id.container, new FragmentWithAState(), "content")
-//                .addToBackStack(null)
-//                .commit();
-
     }
 
     public void onShowWithoutState(View view) {
@@ -127,6 +133,12 @@ public class SaveFragmentStateExampleActivity extends AppCompatActivity {
             getFragmentManager()
                     .beginTransaction()
                     .replace(R.id.container, new FragmentOne(), "content")
+
+                    /**
+                     * We need to add this new fragment to fragment navigation stack,
+                     * so it could be popped from it when needed (in onShowWithState and onBackPressed),
+                     * to navigate back to other FragmentWithAState fragment.
+                     */
                     .addToBackStack(null)
                     .commit();
         }
