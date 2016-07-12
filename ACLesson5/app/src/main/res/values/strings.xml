@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ACLesson5</string>
+    <string name="animation_examples">Animation Examples</string>
+    <string name="object_animator_examples">Object Animator Examples</string>
+    <string name="value_animator_examples">Value Animator Examples</string>
+    <string name="hackertyper">HackerTyper</string>
+</resources>
