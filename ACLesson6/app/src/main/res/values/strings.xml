@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ACLesson6</string>
+    <string name="hintTextName">Name</string>
+    <string name="hintTextInfo">Info</string>
+    <string name="submit">Submit</string>
+</resources>
